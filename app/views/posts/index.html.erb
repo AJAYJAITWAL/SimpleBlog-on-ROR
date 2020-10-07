@@ -1,0 +1,8 @@
+<h1 style="color:blue;"><b>Blog Posts</b></h1><br><br>
+<% Post.all.each do |post| %>
+    <div class="well my-2" style="background-color:#E6E6FA;">
+        <h3><%= post.title %></h3>
+        <p><%= post.body %></p>
+        <%= link_to "Read More", post_path(post), :class =>'btn btn-primary' %>
+    </div><br>
+<% end %>
